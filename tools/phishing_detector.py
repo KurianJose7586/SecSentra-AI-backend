@@ -3,9 +3,11 @@ core/tools/phishing_detector.py
 Detects and summarizes phishing or malware indicators in suspicious text messages.
 """
 
-from core.utils.gemini_utils import call_gemini
+# MODIFICATION: Removed 'core.' prefix
+from utils.gemini_utils import call_gemini
 import json
 import re
+# ... (rest of the file is unchanged, no need to copy)
 
 def _build_prompt(text: str) -> str:
     return f"""

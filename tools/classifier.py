@@ -15,9 +15,12 @@ The module is robust to truncated model replies and retries using a stronger mod
 import json
 import logging
 from typing import Dict, Any, Optional
-from core.utils.gemini_utils import call_gemini, MODEL
+# MODIFICATION: Removed 'core.' prefix
+from utils.gemini_utils import call_gemini, MODEL
 
 logger = logging.getLogger("Classifier")
+
+# ... (rest of the file is unchanged, no need to copy)
 
 STRONG_MODEL = "gemini-2.5-pro"
 

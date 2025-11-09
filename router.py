@@ -1,18 +1,19 @@
 """
-core/router.py
 Routing logic for the AI Security Toolkit.
 Decides which tool to call and invokes it.
 Now fully integrates phishing, vulnerability, configuration, and classification tools.
 """
 
 import logging
-from core.utils.gemini_utils import call_gemini
+# MODIFICATION: Removed 'core.' prefix
+from utils.gemini_utils import call_gemini
 
 # Import all available tools
-from core.tools.phishing_detector import analyze_phishing
-from core.tools.vuln_scanner import analyze_vuln
-from core.tools.config_risk import analyze_config
-from core.tools.classifier import classify_text
+# MODIFICATION: Removed 'core.tools.' prefix
+from tools.phishing_detector import analyze_phishing
+from tools.vuln_scanner import analyze_vuln
+from tools.config_risk import analyze_config
+from tools.classifier import classify_text
 
 logger = logging.getLogger("Router")
 

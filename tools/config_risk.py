@@ -5,13 +5,15 @@ Robust Configuration risk detector with:
 - stronger retry model
 - continuation attempt to repair truncated JSON
 """
-
 import json
 import logging
 from typing import Dict, Any, Optional
-from core.utils.gemini_utils import call_gemini, MODEL
+# MODIFICATION: Removed 'core.' prefix
+from utils.gemini_utils import call_gemini, MODEL
 
 logger = logging.getLogger("ConfigRisk")
+
+# ... (rest of the file is unchanged, no need to copy)
 
 # Use a stronger model for retries
 STRONG_MODEL = "gemini-2.5-pro"

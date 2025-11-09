@@ -4,12 +4,17 @@ Static vulnerability scanner using Gemini API.
 Robust JSON extraction, retry and recovery handling to deal with truncated model outputs.
 """
 
+
+
 import json
 import logging
 from typing import Dict, Any
-from core.utils.gemini_utils import call_gemini, MODEL
+# MODIFICATION: Removed 'core.' prefix
+from utils.gemini_utils import call_gemini, MODEL
 
 logger = logging.getLogger("VulnScanner")
+
+# ... (rest of the file is unchanged, no need to copy)
 
 # ---------------------------------------------------------------------
 # Prompt Template (escaped braces because we'll .format(language, code))
